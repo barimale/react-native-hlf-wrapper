@@ -1,0 +1,62 @@
+{
+  "name": "SampleOrg Network",
+  "version": "1.0.0",
+  "client": {
+    "organization": "SampleOrg",
+    "connection": {
+      "timeout": {
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    },
+    "credentialStore": {
+      "path": "keystoreX",
+      "cryptoStore": {
+        "path": "mspX"
+      }
+    }
+  },
+  "organizations": {
+    "SampleOrg": {
+      "mspid": "SampleOrg",
+      "peers": [
+        "peer-dev"
+      ],
+      "certificateAuthorities": [
+        "ca-dev"
+      ],
+      "users": {
+        "x": {
+          "x": "x"
+        }
+      }
+    }
+  },
+  "peers": {
+    "peer-dev": {
+      "url": "grpc://localhost:7051",
+      "tlsCACerts": {
+        "pem": ""
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "peer",
+        "hostnameOverride": "peer"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca-dev": {
+      "url": "http://localhost:7054",
+      "caName": "",
+      "tlsCACerts": {
+        "pem": [
+          ""
+        ]
+      },
+      "httpOptions": {
+        "verify": false
+      }
+    }
+  }
+}
