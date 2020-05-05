@@ -1,16 +1,14 @@
 import { NativeModules } from 'react-native';
-const { HlfWrapper } = NativeModules
-
 import * as RNFS from 'react-native-fs';
-
-class HlfSdk {
+class SDK {
     constructor() {
         this.rnfsPath = RNFS.DocumentDirectoryPath;
         this.connectionProfilePath  = this.rnfsPath + "/connection_profile.json";
+        this.HlfWrapper = NativeModules.HlfWrapper;
     }
     // Native call test Function
     async hello() {
-        return await HlfWrapper.sampleMethod();
+        return await this.HlfWrapper.sampleMethod();
     }
     getRNFSPath() {
         return this.rnfsPath
@@ -29,33 +27,26 @@ class HlfSdk {
     }
 
     async enrollUser(user, secret) {
-        return await HlfWrapper.enroll(user, secret, this.connectionProfilePath);
+        return await this.HlfWrapper.enroll(user, secret, this.connectionProfilePath);
     }
 
     async lsRNFS() {
         // get a list of files and directories in the main bundle
-        RNFS.readDir(this.rnfsPath)
+        console.log("list the RNFS dir")
+        await RNFS.readDir(this.rnfsPath)
             .then((result) => {
                 console.log('GOT RESULT', result);
-
-                // stat the first file
-                return Promise.all([RNFS.stat(result[0].path), result[0].path]);
-            })
-            .then((statResult) => {
-                if (statResult[0].isFile()) {
-                    // if we have a file, read it
-                    return RNFS.readFile(statResult[1], 'utf8');
-                }
-
-                return 'no file';
-            })
-            .then((contents) => {
-                // log the file contents
-                console.log(contents);
             })
             .catch((err) => {
                 console.log(err.message, err.code);
             });
     }
+
+    async loadPrivateKey(privateKeyName) {
+        // get a list of files and directories in the main bundle
+        console.log("reading private key from RNFS")
+        return await RNFS.readFile(this.rnfsPath + '/msp/keystore/' + privateKeyName);
+    }
 }
-export default new HlfSdk();
+const HlfSdk = new SDK()
+export default HlfSdk;
