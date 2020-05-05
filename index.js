@@ -44,7 +44,7 @@ class SDK {
 
     async loadPrivateKey(privateKeyName) {
         // get a list of files and directories in the main bundle
-        console.log("reading private key from RNFS")
+        console.log("reading private key from RNFS: " + this.rnfsPath + '/msp/keystore/' + privateKeyName)
         return await RNFS.readFile(this.rnfsPath + '/msp/keystore/' + privateKeyName);
     }
 }

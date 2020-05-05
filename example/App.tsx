@@ -49,7 +49,7 @@ const showPrivateKey = async (user: string, secret: string) => {
   let message = await HlfSdk.enrollUser(user, secret);
   let userCrypto = JSON.parse(message);
   let privateKey = await HlfSdk.loadPrivateKey(userCrypto.privKeyName);
-  Alert.alert('☆NATIVE PROMISE MESSAGE (cat private key)☆', privateKey);
+  Alert.alert('☆NATIVE PROMISE MESSAGE (cat private key: ' + userCrypto.privKeyName + ')☆', privateKey);
 }
 
 // #############################################################################
