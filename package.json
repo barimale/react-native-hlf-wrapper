@@ -31,5 +31,14 @@
     "react": "^16.11.0",
     "react-native": "^0.62.2",
     "react-native-fs": "^2.16.6"
-  }
+  },
+  "keywords": [
+    "react-native",
+    "hyperledger",
+    "hyperledger fabric",
+    "fabric-sdk-go",
+    "hyperledger fabric sdk",
+    "react-native hyperledger",
+    "react-native hyperledger fabric"
+  ]
 }
