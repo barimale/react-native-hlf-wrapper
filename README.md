@@ -60,7 +60,7 @@ let response = await HlfSdk.query(user, channelName, chaincodeName, fnc, args); 
 ```
 
 ### Testing up the example app associated with this project [Optional]
-+ navigate to the example folder 
++ navigate to the example folder under project: https://github.com/achak1987/react-native-hlf-wrapper
 + connection_profile.template.json file is already copied here as connection_profile.json
 + change the connection_profile.json as per your hyperledger fabric configuration
 + Install dependencies

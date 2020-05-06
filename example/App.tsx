@@ -59,7 +59,7 @@ const query = async (user: string, channelName: string, chaincodeName: string, f
   Alert.alert('☆NATIVE PROMISE MESSAGE (query)☆', message);
 };
 
-const username = 'user1';
+const username = 'user2';
 const userpw = 'userpw';
 // #############################################################################
 
@@ -109,7 +109,7 @@ const App = () => {
         <Button
           title={'Get Content (query)'}
           onPress={() =>
-            query('user31', 'myc', 'mysome_cc', 'getContentState', 'c1')
+            query(username, 'myc', 'mysome_cc', 'getContentState', 'c1')
           }
         />
       </View>
