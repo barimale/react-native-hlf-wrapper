@@ -59,7 +59,7 @@ const query = async (user: string, channelName: string, chaincodeName: string, f
   Alert.alert('☆NATIVE PROMISE MESSAGE (query)☆', message);
 };
 
-const username = 'user2';
+const username = 'user3';
 const userpw = 'userpw';
 // #############################################################################
 

@@ -1,2 +1,9 @@
-example
+example/
+node_modules/
 yarn.lock
+package.json.lock
+android/.gradle/
+android/.idea/
+.idea/
+.gitattributes
+connection_profile.template.json
