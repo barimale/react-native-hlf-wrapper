@@ -15,7 +15,7 @@ class SDK {
     }
 
     async connectionProfileSetup(connectionProfile) {
-        connectionProfile.client.credentialStore.path = this.rnfsPath + '/keystore'
+        connectionProfile.client.credentialStore.path = this.rnfsPath + '/wallet'
         connectionProfile.client.credentialStore.cryptoStore.path = this.rnfsPath +  '/msp'
         RNFS.writeFile(this.connectionProfilePath, JSON.stringify(connectionProfile))
             .then((success) => {
@@ -46,6 +46,14 @@ class SDK {
         // get a list of files and directories in the main bundle
         console.log("reading private key from RNFS: " + this.rnfsPath + '/msp/keystore/' + privateKeyName)
         return await RNFS.readFile(this.rnfsPath + '/msp/keystore/' + privateKeyName);
+    }
+
+    async query(user, channelName, chaincodeName, fnc, args) {
+        return await this.HlfWrapper.query(user, this.connectionProfilePath, channelName, chaincodeName, fnc, args);
+    }
+
+    async invoke(user, channelName, chaincodeName, fnc, args) {
+        return await this.HlfWrapper.invoke(user, this.connectionProfilePath, channelName, chaincodeName, fnc, args);
     }
 }
 const HlfSdk = new SDK()

@@ -6,30 +6,53 @@
     "connection": {
       "timeout": {
         "peer": {
-          "endorser": "300"
+          "endorser": "100"
         }
       }
     },
     "credentialStore": {
-      "path": "keystoreX",
+      "path": "./walletX",
       "cryptoStore": {
-        "path": "mspX"
+        "path": "./mspX"
+      }
+    }
+  },
+  "channels": {
+    "myc": {
+      "orderers": [
+        "orderer-dev"
+      ],
+      "peers": {
+        "peer-dev": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "ledgerQuery": true,
+          "eventSource": true
+        }
       }
     }
   },
   "organizations": {
     "SampleOrg": {
       "mspid": "SampleOrg",
+      "cryptoPath": "./mspX",
       "peers": [
         "peer-dev"
       ],
       "certificateAuthorities": [
         "ca-dev"
-      ],
-      "users": {
-        "x": {
-          "x": "x"
-        }
+      ]
+    }
+  },
+  "orderers": {
+    "orderer-dev": {
+      "url": "grpc://10.0.3.2:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer",
+        "hostnameOverride": "orderer"
+      },
+      "tlsCACerts": {
+        "pem": ""
       }
     }
   },
@@ -47,7 +70,7 @@
   },
   "certificateAuthorities": {
     "ca-dev": {
-      "url": "http://192.168.0.20:7054",
+      "url": "http://10.0.3.2:7054",
       "caName": "",
       "tlsCACerts": {
         "pem": [

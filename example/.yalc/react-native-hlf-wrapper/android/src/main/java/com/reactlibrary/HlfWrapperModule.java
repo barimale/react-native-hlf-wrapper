@@ -43,4 +43,28 @@ public class HlfWrapperModule extends ReactContextBaseJavaModule {
             promise.reject("E_ENROLL_ERROR", e);
         }
     }
+
+    @ReactMethod
+    public void query(String user, String connectionProfilePath, String channelName, String chaincodeName, String fnc, String args, Promise promise) {
+        try {
+            String result = Hlfsdk.query(user, connectionProfilePath, channelName, chaincodeName, fnc,  args);
+            promise.resolve(result);
+        } catch (IllegalViewOperationException e) {
+            promise.reject("E_VIEW_ERROR", e);
+        } catch (Exception e) {
+            promise.reject("E_QUERY_ERROR", e);
+        }
+    }
+
+    @ReactMethod
+    public void invoke(String user, String connectionProfilePath, String channelName, String chaincodeName, String fnc, String args, Promise promise) {
+        try {
+            String result = Hlfsdk.invoke(user, connectionProfilePath, channelName, chaincodeName, fnc,  args);
+            promise.resolve(result);
+        } catch (IllegalViewOperationException e) {
+            promise.reject("E_VIEW_ERROR", e);
+        } catch (Exception e) {
+            promise.reject("E_INVOKE_ERROR", e);
+        }
+    }
 }

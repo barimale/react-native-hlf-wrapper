@@ -9,15 +9,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar, Button, Alert,
-} from 'react-native';
-
+import {StyleSheet, View, Text, Button, Alert} from 'react-native';
 
 // ############################# HLF Services #####################################
 // @ts-ignore
@@ -49,9 +41,26 @@ const showPrivateKey = async (user: string, secret: string) => {
   let message = await HlfSdk.enrollUser(user, secret);
   let userCrypto = JSON.parse(message);
   let privateKey = await HlfSdk.loadPrivateKey(userCrypto.privKeyName);
-  Alert.alert('☆NATIVE PROMISE MESSAGE (cat private key: ' + userCrypto.privKeyName + ')☆', privateKey);
-}
+  Alert.alert(
+    '☆NATIVE PROMISE MESSAGE (cat private key: ' +
+      userCrypto.privKeyName +
+      ')☆',
+    privateKey,
+  );
+};
 
+const invoke = async (user: string, channelName: string, chaincodeName: string, fnc: string, args: string) => {
+  let message = await HlfSdk.invoke(user, channelName, chaincodeName, fnc, args);
+  Alert.alert('☆NATIVE PROMISE MESSAGE (invoke)☆', message);
+};
+
+const query = async (user: string, channelName: string, chaincodeName: string, fnc: string, args: string) => {
+  let message = await HlfSdk.query(user, channelName, chaincodeName, fnc, args);
+  Alert.alert('☆NATIVE PROMISE MESSAGE (query)☆', message);
+};
+
+const username = 'user1';
+const userpw = 'userpw';
 // #############################################################################
 
 const App = () => {
@@ -62,18 +71,47 @@ const App = () => {
         <Button title={'Native Test'} onPress={test} />
         <View style={{flex: 0.01}} />
         <Button
-            title={'Setup: Connection Profile'}
-            onPress={connectionProfileSetup}
+          title={'Setup: Connection Profile'}
+          onPress={connectionProfileSetup}
         />
         <View style={{flex: 0.01}} />
         <Button
-            title={'Enroll User'}
-            onPress={() => enrollUser('user31', 'userpw')}
+          title={'Enroll User'}
+          onPress={() => enrollUser(username, userpw)}
         />
         <View style={{flex: 0.01}} />
         <Button title={'ls RNFS'} onPress={lsRNFS} />
         <View style={{flex: 0.01}} />
-        <Button title={'Show private key'} onPress={() => showPrivateKey('user31', 'userpw')} />
+        <Button
+          title={'Show private key'}
+          onPress={() => showPrivateKey(username, userpw)}
+        />
+        <View style={{flex: 0.01}} />
+        <Button
+          title={'Create User (invoke)'}
+          onPress={() => invoke(username, 'myc', 'mysome_cc', 'updateUser', '')}
+        />
+        <View style={{flex: 0.01}} />
+        <Button
+          title={'Get User (query)'}
+          onPress={() =>
+            query(username, 'myc', 'mysome_cc', 'getUserState', username)
+          }
+        />
+        <View style={{flex: 0.01}} />
+        <Button
+          title={'Create Content (invoke)'}
+          onPress={() =>
+            invoke(username, 'myc', 'mysome_cc', 'updateContent', 'c1,1,10')
+          }
+        />
+        <View style={{flex: 0.01}} />
+        <Button
+          title={'Get Content (query)'}
+          onPress={() =>
+            query('user31', 'myc', 'mysome_cc', 'getContentState', 'c1')
+          }
+        />
       </View>
     </>
   );
