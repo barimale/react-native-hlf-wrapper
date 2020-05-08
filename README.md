@@ -61,7 +61,7 @@ let response = await HlfSdk.query(user, channelName, chaincodeName, fnc, args); 
 ```
 
 ### Testing up the example app associated with this project [Optional]
-+ navigate to the example folder under project: https://github.com/achak1987/react-native-hlf-wrapper
++ navigate to the example folder under project
 + connection_profile.template.json file is already copied here as connection_profile.json
 + change the connection_profile.json as per your hyperledger fabric configuration
 + Install dependencies
@@ -73,7 +73,7 @@ yarn add react-native-hlf-wrapper
 or using NPM
 ```
 npm install react-native-fs@2.16.6 --save
-yarn install react-native-hlf-wrapper --save
+npm install react-native-hlf-wrapper --save
 ```
 + Auto linking should be done. So we dont  need to manually link them
 + Run the metro server by navigating to this project/example in your terminal and run: ```react-native start```
