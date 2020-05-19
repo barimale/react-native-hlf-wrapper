@@ -457,5 +457,8 @@
     "xmldom": "^0.1.31",
     "yallist": "^2.1.2",
     "yargs": "^14.2.3"
+  },
+  "directories": {
+    "example": "example"
   }
 }
