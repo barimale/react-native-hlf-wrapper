@@ -37,6 +37,9 @@
     "react-native": "^0.62.2",
     "react-native-fs": "^2.16.6"
   },
+  "optionalDependencies" : {
+    "fsevents": "^1.2.13"
+  },
   "bugs": {
     "url": "https://github.com/achak1987/react-native-hlf-wrapper/issues"
   },
@@ -169,7 +172,6 @@
     "for-in": "^1.0.2",
     "find-cache-dir": "^2.1.0",
     "fs-extra": "^8.1.0",
-    "fsevents": "^1.2.13",
     "fragment-cache": "^0.2.1",
     "fs.realpath": "^1.0.0",
     "fresh": "^0.5.2",
