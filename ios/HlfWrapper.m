@@ -1,14 +1,14 @@
 #import "HlfWrapper.h"
-#import <React/RCTLog.h>
+#import <hlfsdk/Hlfsdk.h>
 
 @implementation HlfWrapper
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(Hlfsdk);
 RCT_REMAP_METHOD(hello,
                  resolver: (RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
-  
+
   NSString *result = [NSString hello];
   if (result) {
     resolve(result);
