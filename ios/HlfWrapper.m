@@ -13,7 +13,7 @@ RCT_REMAP_METHOD(hello,
   if (result) {
     resolve(result);
   } else {
-    reject(@"E_GET_ERROR", "Get operation failed", error);
+    reject(@"E_GET_ERROR", @"Get operation failed", error);
   }
 }
 
