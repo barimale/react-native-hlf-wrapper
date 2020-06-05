@@ -242,7 +242,7 @@
     "lodash": "^4.17.15",
     "log-symbols": "^2.2.0",
     "leven": "^3.1.0",
-    "logkitty": "^0.6.1",
+    "logkitty": "^0.7.1",
     "make-dir": "^2.1.0",
     "lru-cache": "^4.1.5",
     "loose-envify": "^1.4.0",
