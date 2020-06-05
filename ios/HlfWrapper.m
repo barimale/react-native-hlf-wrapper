@@ -3,8 +3,8 @@
 
 @implementation HlfWrapper
 
-RCT_EXPORT_MODULE()
-RCT_REMAP_METHOD(sampleMethod,
+RCT_EXPORT_MODULE();
+RCT_REMAP_METHOD(hello,
                  resolver: (RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
@@ -13,7 +13,7 @@ RCT_REMAP_METHOD(sampleMethod,
     resolve(result);
   } else {
     NSError *error = ...
-    reject(@"no_events", @"There were no events", error);
+    reject(@"no_events", @"E_GET_ERROR", error);
   }
 }
 

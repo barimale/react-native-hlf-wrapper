@@ -23,7 +23,7 @@ public class HlfWrapperModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void sampleMethod(Promise promise) {
+    public void hello(Promise promise) {
         try {
             String result = Hlfsdk.hello();
             promise.resolve(result);

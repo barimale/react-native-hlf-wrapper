@@ -3,12 +3,12 @@ import * as RNFS from 'react-native-fs';
 class SDK {
     constructor() {
         this.rnfsPath = RNFS.DocumentDirectoryPath;
-        this.connectionProfilePath  = this.rnfsPath + "/connection_profile.json";
+        this.connectionProfilePath = this.rnfsPath + "/connection_profile.json";
         this.HlfWrapper = NativeModules.HlfWrapper;
     }
     // Native call test Function
     async hello() {
-        return await this.HlfWrapper.sampleMethod();
+        return await this.HlfWrapper.hello();
     }
     getRNFSPath() {
         return this.rnfsPath
@@ -16,7 +16,7 @@ class SDK {
 
     async connectionProfileSetup(connectionProfile) {
         connectionProfile.client.credentialStore.path = this.rnfsPath + '/wallet'
-        connectionProfile.client.credentialStore.cryptoStore.path = this.rnfsPath +  '/msp'
+        connectionProfile.client.credentialStore.cryptoStore.path = this.rnfsPath + '/msp'
         RNFS.writeFile(this.connectionProfilePath, JSON.stringify(connectionProfile))
             .then((success) => {
                 console.log('FILE WRITTEN!');
