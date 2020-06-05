@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* HlfWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */; };
-		F9E22E19248A9E5400DAEE1E /* hlfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E22E17248A9E2200DAEE1E /* hlfsdk.framework */; };
+		F9E22E1D248AA66900DAEE1E /* hlfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E22E17248A9E2200DAEE1E /* hlfsdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E22E19248A9E5400DAEE1E /* hlfsdk.framework in Frameworks */,
+				F9E22E1D248AA66900DAEE1E /* hlfsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +232,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/libs/hlfsdk",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -253,6 +254,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/libs/hlfsdk",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
