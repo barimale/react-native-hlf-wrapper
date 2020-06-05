@@ -8,12 +8,12 @@ RCT_REMAP_METHOD(hello,
                  resolver: (RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
-  NSError *error;
-  NSString *result = [NSString hello error:&error];
+  
+  NSString *result = [NSString hello];
   if (result) {
     resolve(result);
   } else {
-    reject(@"E_GET_ERROR", @"Get operation failed", error);
+    reject(@"E_GET_ERROR", @"Get operation failed", result);
   }
 }
 
