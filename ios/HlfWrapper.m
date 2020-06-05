@@ -3,18 +3,18 @@
 
 @implementation HlfWrapper
 
-RCT_EXPORT_MODULE(Hlfsdk);
+RCT_EXPORT_MODULE();
 RCT_REMAP_METHOD(hello,
                  resolver: (RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
-
-  NSString *result = [NSString hello];
-  if (result) {
-    resolve(result);
-  } else {
-    reject(@"E_GET_ERROR", @"Get operation failed", result);
-  }
+ @try{
+   NSString *result = [[NSString] hello];
+   resolve(result);
+ }
+ @catch(NSException *exception){
+   reject(@"E_GET_ERROR", @"Get operation failed", @exception.reason);
+ }
 }
 
 @end
