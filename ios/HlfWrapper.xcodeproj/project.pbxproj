@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* HlfWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */; };
 		F93C933E249108F700C3A367 /* hlfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C933D249108F600C3A367 /* hlfsdk.framework */; };
-		F93C934224911CD400C3A367 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C934124911CD400C3A367 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F93C934224911CD400C3A367 /* JavaScriptCore.framework in Frameworks */,
 				F93C933E249108F700C3A367 /* hlfsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
