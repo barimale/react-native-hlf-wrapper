@@ -5,7 +5,7 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_REMAP_METHOD(hello,
+RCT_REMAP_METHOD(sampleMethod,
                  resolver: (RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
