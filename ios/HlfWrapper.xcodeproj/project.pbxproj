@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* HlfWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */; platformFilter = ios; };
+		B3E7B58A1CC2AC0600A0062D /* HlfWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */; };
 		F93C933E249108F700C3A367 /* hlfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C933D249108F600C3A367 /* hlfsdk.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +179,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -223,6 +224,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -243,6 +245,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = HlfWrapper;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -263,6 +266,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = HlfWrapper;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
