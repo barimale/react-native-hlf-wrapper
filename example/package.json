@@ -13,7 +13,7 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-fs": "^2.16.6",
-    "react-native-hlf-wrapper": "https://github.com/achak1987/react-native-hlf-wrapper"
+    "react-native-hlf-wrapper": "https://github.com/bityoga/react-native-hlf-wrapper.git#ios-supportv3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

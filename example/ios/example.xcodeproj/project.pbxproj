@@ -134,7 +134,6 @@
 				7B15A14E17F2473C3B301E67 /* Pods-example-tvOSTests.debug.xcconfig */,
 				C359148084EC3E7B9B3DC46A /* Pods-example-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

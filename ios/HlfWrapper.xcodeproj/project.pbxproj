@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* HlfWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */; };
 		F93C933E249108F700C3A367 /* hlfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C933D249108F600C3A367 /* hlfsdk.framework */; };
+		F93C934224911CD400C3A367 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C934124911CD400C3A367 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		B3E7B5881CC2AC0600A0062D /* HlfWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HlfWrapper.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HlfWrapper.m; sourceTree = "<group>"; };
 		F93C933D249108F600C3A367 /* hlfsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = hlfsdk.framework; path = libs/hlfsdk.framework; sourceTree = "<group>"; };
+		F93C934124911CD400C3A367 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93C934224911CD400C3A367 /* JavaScriptCore.framework in Frameworks */,
 				F93C933E249108F700C3A367 /* hlfsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,7 +60,16 @@
 				B3E7B5881CC2AC0600A0062D /* HlfWrapper.h */,
 				B3E7B5891CC2AC0600A0062D /* HlfWrapper.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				F93C934024911CD400C3A367 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		F93C934024911CD400C3A367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F93C934124911CD400C3A367 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
