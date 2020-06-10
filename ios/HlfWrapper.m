@@ -9,7 +9,7 @@ RCT_REMAP_METHOD(hello,
                  rejecter: (RCTPromiseRejectBlock)reject)
 {
  @try{
-   NSString *result = [[NSString] hello];
+   NSString *result = HlfsdkHello();
    resolve(result);
  }
  @catch(NSException *exception){
