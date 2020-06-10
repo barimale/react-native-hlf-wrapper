@@ -1,14 +1,21 @@
 #import "HlfWrapper.h"
-
+#import <hlfsdk/Hlfsdk.h>
 
 @implementation HlfWrapper
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnull NSNumber *)numberArgument callback:(RCTResponseSenderBlock)callback)
+RCT_REMAP_METHOD(hello,
+                 resolver: (RCTPromiseResolveBlock)resolve
+                 rejecter: (RCTPromiseRejectBlock)reject)
 {
-    // TODO: Implement some actually useful functionality
-    callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
+ @try{
+   NSString *result = HlfsdkHello();
+   resolve(result);
+ }
+ @catch(NSException *exception){
+   reject(@"E_GET_ERROR", @"Get operation failed", @exception.reason);
+ }
 }
 
 @end
