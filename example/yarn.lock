@@ -5116,7 +5116,7 @@ react-native-fs@^2.16.6:
 
 "react-native-hlf-wrapper@https://github.com/bityoga/react-native-hlf-wrapper.git#ios-support":
   version "0.0.2"
-  resolved "https://github.com/bityoga/react-native-hlf-wrapper.git#a456009644b4d2f2340e105105847e04843ee652"
+  resolved "https://github.com/bityoga/react-native-hlf-wrapper.git#f52fa1f1a278aa3d0ae812efdcbf2a4de2f6211a"
   dependencies:
     abort-controller "^3.0.0"
     absolute-path "^0.0.0"
