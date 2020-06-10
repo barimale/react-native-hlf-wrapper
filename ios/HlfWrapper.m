@@ -1,5 +1,5 @@
 #import "HlfWrapper.h"
-#import <hlfsdk/hlfsdk.h>
+#import <hlfsdk/Hlfsdk.objc.h>
 
 @implementation HlfWrapper
 
