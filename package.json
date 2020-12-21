@@ -1,8 +1,8 @@
 {
-  "name": "react-native-hlf-wrapper",
-  "title": "React Native Hlf Wrapper",
-  "version": "0.0.1",
-  "description": "TODO",
+  "name": "react-native-hlf-wrapper-exp",
+  "title": "React Native Hlf Wrapper- experimental",
+  "version": "0.0.3",
+  "description": "Forked and extended by barimale",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,7 @@
   "license": "Apache-2.0",
   "licenseFilename": "LICENSE",
   "peerDependencies": {
+    "fsevents": "^1.2.13",
     "react": "^16.8.1",
     "react-native": ">=0.60.0-rc.0 <1.0.x",
     "react-native-fs": "^2.16.6"
@@ -169,7 +170,6 @@
     "for-in": "^1.0.2",
     "find-cache-dir": "^2.1.0",
     "fs-extra": "^8.1.0",
-    "fsevents": "^1.2.13",
     "fragment-cache": "^0.2.1",
     "fs.realpath": "^1.0.0",
     "fresh": "^0.5.2",
