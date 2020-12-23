@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "react-native-hlf-wrapper": {
-      "signature": "bfe076408e3f0bff43ac8cb771d84070",
-      "file": true
-    }
-  }
-}

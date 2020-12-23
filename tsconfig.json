@@ -1,0 +1,10 @@
+{
+    "files": ["dummy.ts"],
+    "include": ["index.js"],
+    "exclude": ["node_modules/*", "node_modules/@types"],
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist"
+    }
+}
